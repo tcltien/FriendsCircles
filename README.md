@@ -28,3 +28,11 @@ Required functionalities:
     - [ ] calculate time of member to reach destination  
     - [ ] set route for group and share route to every member  
 - [ ] sharing tracking section from host to other user  
+- 
+## Video Walkthrough  
+
+Here's a walkthrough of implemented user stories:  
+![FriendsZone.gif](FriendsZone.gif)  
+
+This wireframe is created by www.fluidui.com.  
+Link to that wireframe: https://www.fluidui.com/editor/live/preview/p_QA263SEzx93JKgQTutJrGkonDTu1kFaE.1470676904998
