@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C15408D1D648AB400A62391 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C15408C1D648AB400A62391 /* GoogleService-Info.plist */; };
+		3C6B9BAC1D648691007DBADC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6B9BAB1D648691007DBADC /* Login.storyboard */; };
+		3C6B9BAF1D6486D0007DBADC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B9BAE1D6486D0007DBADC /* LoginViewController.swift */; };
+		3C6B9BB11D64870E007DBADC /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B9BB01D64870E007DBADC /* VerifyViewController.swift */; };
+		3C6B9BB41D6488AD007DBADC /* LoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B9BB31D6488AD007DBADC /* LoginClient.swift */; };
+		3C6B9BB71D6488E8007DBADC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B9BB61D6488E8007DBADC /* User.swift */; };
 		54CECF385C6128D3A2D81D86 /* Pods_FriendsCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB3202213F4D8D6365A5AD5 /* Pods_FriendsCircle.framework */; };
 		873C864D1D572C6A00747B0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C864C1D572C6A00747B0B /* AppDelegate.swift */; };
 		873C864F1D572C6A00747B0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C864E1D572C6A00747B0B /* ViewController.swift */; };
@@ -16,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C15408C1D648AB400A62391 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3C6B9BAB1D648691007DBADC /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3C6B9BAE1D6486D0007DBADC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3C6B9BB01D64870E007DBADC /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		3C6B9BB31D6488AD007DBADC /* LoginClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginClient.swift; sourceTree = "<group>"; };
+		3C6B9BB61D6488E8007DBADC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		78791F4D39B132AD2B5205E2 /* Pods-FriendsCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsCircle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsCircle/Pods-FriendsCircle.debug.xcconfig"; sourceTree = "<group>"; };
 		873C86491D572C6A00747B0B /* FriendsCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		873C864C1D572C6A00747B0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +52,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C6B9BAD1D6486B7007DBADC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C6B9BAE1D6486D0007DBADC /* LoginViewController.swift */,
+				3C6B9BB01D64870E007DBADC /* VerifyViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3C6B9BB21D648890007DBADC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3C6B9BB31D6488AD007DBADC /* LoginClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		3C6B9BB51D6488D1007DBADC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C6B9BB61D6488E8007DBADC /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		835388CD882984044F19F2CF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +107,17 @@
 		873C864B1D572C6A00747B0B /* FriendsCircle */ = {
 			isa = PBXGroup;
 			children = (
+				3C6B9BB51D6488D1007DBADC /* Models */,
+				3C6B9BB21D648890007DBADC /* API */,
+				3C6B9BAD1D6486B7007DBADC /* ViewControllers */,
 				873C864C1D572C6A00747B0B /* AppDelegate.swift */,
 				873C864E1D572C6A00747B0B /* ViewController.swift */,
 				873C86501D572C6A00747B0B /* Main.storyboard */,
 				873C86531D572C6A00747B0B /* Assets.xcassets */,
 				873C86551D572C6A00747B0B /* LaunchScreen.storyboard */,
 				873C86581D572C6A00747B0B /* Info.plist */,
+				3C6B9BAB1D648691007DBADC /* Login.storyboard */,
+				3C15408C1D648AB400A62391 /* GoogleService-Info.plist */,
 			);
 			path = FriendsCircle;
 			sourceTree = "<group>";
@@ -95,12 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 873C865B1D572C6A00747B0B /* Build configuration list for PBXNativeTarget "FriendsCircle" */;
 			buildPhases = (
-				F1CB2237137369A9A9167C14 /* Check Pods Manifest.lock */,
+				F1CB2237137369A9A9167C14 /* [CP] Check Pods Manifest.lock */,
 				873C86451D572C6A00747B0B /* Sources */,
 				873C86461D572C6A00747B0B /* Frameworks */,
 				873C86471D572C6A00747B0B /* Resources */,
-				0EB2B6DA104B31AF70C751DF /* Embed Pods Frameworks */,
-				0AD7181EC4DE0A614B17BC20 /* Copy Pods Resources */,
+				0EB2B6DA104B31AF70C751DF /* [CP] Embed Pods Frameworks */,
+				0AD7181EC4DE0A614B17BC20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,7 +192,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6B9BAC1D648691007DBADC /* Login.storyboard in Resources */,
 				873C86571D572C6A00747B0B /* LaunchScreen.storyboard in Resources */,
+				3C15408D1D648AB400A62391 /* GoogleService-Info.plist in Resources */,
 				873C86541D572C6A00747B0B /* Assets.xcassets in Resources */,
 				873C86521D572C6A00747B0B /* Main.storyboard in Resources */,
 			);
@@ -159,14 +203,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0AD7181EC4DE0A614B17BC20 /* Copy Pods Resources */ = {
+		0AD7181EC4DE0A614B17BC20 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,14 +218,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendsCircle/Pods-FriendsCircle-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0EB2B6DA104B31AF70C751DF /* Embed Pods Frameworks */ = {
+		0EB2B6DA104B31AF70C751DF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,14 +233,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriendsCircle/Pods-FriendsCircle-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F1CB2237137369A9A9167C14 /* Check Pods Manifest.lock */ = {
+		F1CB2237137369A9A9167C14 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6B9BAF1D6486D0007DBADC /* LoginViewController.swift in Sources */,
+				3C6B9BB41D6488AD007DBADC /* LoginClient.swift in Sources */,
+				3C6B9BB71D6488E8007DBADC /* User.swift in Sources */,
+				3C6B9BB11D64870E007DBADC /* VerifyViewController.swift in Sources */,
 				873C864F1D572C6A00747B0B /* ViewController.swift in Sources */,
 				873C864D1D572C6A00747B0B /* AppDelegate.swift in Sources */,
 			);
