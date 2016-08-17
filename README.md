@@ -28,3 +28,8 @@ Required functionalities:
     - [ ] calculate time of member to reach destination  
     - [ ] set route for group and share route to every member  
 - [ ] sharing tracking section from host to other user  
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+![FriendsZone.gif](FriendsZone.gif)
