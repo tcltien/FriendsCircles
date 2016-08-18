@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
 class User: NSObject {
     var name: NSString?
+    var firstName: String?
+    var lastName: String?
     var phoneNumber: NSString?
     var verifyNumber: NSString?
     var active: Bool?
     var dictionary: NSDictionary?
+    var coordinate: CLLocation?
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
@@ -22,6 +26,9 @@ class User: NSObject {
         verifyNumber = dictionary["verifyNumber"] as? String
         active = dictionary["active"] as? Bool
         super.init()
+    }
+    init(phoneNumber: String) {
+        self.phoneNumber = phoneNumber
     }
     
     static let logoutString = "UserDidLogout"
