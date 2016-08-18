@@ -13,7 +13,9 @@ import ContactsUI
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet var phoneNumTxtField: UITextField!
     var users: [User]?
+    var verifyNum: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +25,28 @@ class LoginViewController: UIViewController {
 
     @IBAction func onLogin(sender: UIButton) {
         
+        if let phone = phoneNumTxtField.text {
+            getVerifyPhoneNumber(phone)
+        }
         
-        performSegueWithIdentifier("Login2Home", sender: self)
+        performSegueWithIdentifier("Login2Verify", sender: self)
     }
     
     @IBAction func onFetchButton(sender: UIButton) {
         fetchContact()
         performSegueWithIdentifier("Login2ContactsList", sender: self)
+    }
+    
+    func getVerifyPhoneNumber(phone:String) {
+        
+        let loginClient = LoginClient()
+        //        let userRef = loginClient.getRefFirebaseByPhoneNumber(phone)
+        loginClient.getVerifyPhoneNumber({ () -> () in
+            print("I get verify in")
+            self.performSegueWithIdentifier("verifySegue", sender: nil)
+            }, failure: { (error) in
+                print(error)
+            }, phone: phone)
     }
     
     //This function gets all the contact from iPhone. Currently, it gets first name, last name and phonenumber. With phonenumber, it gets phone in field CNLabelPhoneNumberMobile, it needs to be more investigated to get true mobilephone number
@@ -108,6 +125,12 @@ class LoginViewController: UIViewController {
             let nextVC = segue.destinationViewController as! ContactsListViewController
             
         }
+        if segue.identifier == "Login2Verify" {
+            let verifyVC = segue.destinationViewController as! VerifyViewController
+            verifyVC.phoneNum = phoneNumTxtField.text!
+            
+        }
+        
         // Pass the selected object to the new view controller.
     }
     

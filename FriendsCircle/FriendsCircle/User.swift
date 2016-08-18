@@ -1,36 +1,65 @@
 //
 //  User.swift
-//  FriendsCircle
+//  LoginDemo
 //
-//  Created by Vu Nguyen on 8/13/16.
+//  Created by Le Huynh Anh Tien on 8/15/16.
 //  Copyright © 2016 Huynh Tri Dung. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import MapKit
 
-
-class  User: NSObject {
-    var UserID: String?
-    var phoneNum: String!
-    var Avatar: UIImage?
-//        {
-//        get {
-//            return Avatar
-//        }
-//        set {
-//            Avatar = newValue
-//        }
-//    }
+class User: NSObject {
+    var name: NSString?
     var firstName: String?
     var lastName: String?
-    var currentLocation: CLLocationCoordinate2D?
+    var phoneNumber: NSString?
+    var verifyNumber: NSString?
+    var active: Bool?
+    var dictionary: NSDictionary?
+    var coordinate: CLLocation?
     
-    
-    init(phoneNum: String) {
-        self.phoneNum = phoneNum
+    init(dictionary: NSDictionary) {
+        self.dictionary = dictionary
+        name = dictionary["name"] as? String
+        phoneNumber = dictionary["phoneNumber"] as? String
+        verifyNumber = dictionary["verifyNumber"] as? String
+        active = dictionary["active"] as? Bool
+        super.init()
+    }
+    init(phoneNumber: String) {
+        self.phoneNumber = phoneNumber
     }
     
+    static let logoutString = "UserDidLogout"
+    static var _currentUser: User?
     
+    class var currentUser: User? {
+        get {
+            if _currentUser == nil {
+                let defaults = NSUserDefaults.standardUserDefaults()
+                
+                let userData = defaults.objectForKey("currentUserData") as? NSData
+                if  let userData = userData {
+                    let dictionary = try! NSJSONSerialization.JSONObjectWithData(userData, options: []) as! NSDictionary
+                    _currentUser = User(dictionary: dictionary)
+                    
+                }
+            }
+            return _currentUser
+        }
+        set(user) {
+            _currentUser = user
+            let defaults = NSUserDefaults.standardUserDefaults()
+            if let user = user {
+                let data = try! NSJSONSerialization.dataWithJSONObject(user.dictionary!, options: [])
+                defaults.setObject(data, forKey: "currentUserData")
+            } else {
+                defaults.setObject(nil, forKey: "currentUserData")
+            }
+            defaults.synchronize()
+        }
+    }
 }
+
+

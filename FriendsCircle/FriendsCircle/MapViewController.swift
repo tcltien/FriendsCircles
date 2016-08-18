@@ -67,24 +67,19 @@ class MapViewController: UIViewController {
     //MARK: Testing data
     func testDataInit(){
         
-        var user = User(phoneNum: "0937264497")
+        var user = User(phoneNumber: "0937264497")
         user.firstName = "Vu"
         user.lastName = "Nguyen"
-        user.currentLocation = CLLocationCoordinate2D(latitude: 10.7761477,longitude: 106.6640438)
+        user.coordinate = CLLocation(latitude: 10.7761477,longitude: 106.6640438)
         attendedUser.append(user)
       
         
-        user = User(phoneNum: "01689903461")
-        user.firstName = "Vanessa"
-        user.lastName = "Vo"
-        user.currentLocation = CLLocationCoordinate2D(latitude: 10.764772,longitude: 106.6851908)
-        attendedUser.append(user)
-
         
-        user = User(phoneNum: "01689903461")
+        user = User(phoneNumber: "01689903461")
         user.firstName = "Gon"
         user.lastName = "Nguyen"
-        user.currentLocation = CLLocationCoordinate2D(latitude: 10.772736,longitude: 106.658706)
+        user.coordinate = CLLocation(latitude: 10.772736, longitude: 106.658706)
+        //user.coordinate?.coordinate = CLLocationCoordinate2D(latitude: 10.772736,longitude: 106.658706)
         attendedUser.append(user)
 
 
@@ -95,10 +90,10 @@ class MapViewController: UIViewController {
     
     func currentUserInit() {
         
-        currentUser?.Avatar? = UIImage(named: "avatar")!
-        currentUser?.firstName = "Vu"
-        currentUser?.lastName = "Nguyen"
-        currentUser?.phoneNum = "0937264497"
+        //currentUser?.Avatar? = UIImage(named: "avatar")!
+        //currentUser?.firstName = "Vu"
+        currentUser?.name = "Vu Nguyen"
+        currentUser?.phoneNumber = "0937264497"
     }
 
 

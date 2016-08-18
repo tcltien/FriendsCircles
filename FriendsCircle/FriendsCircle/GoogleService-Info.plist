@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>389034926389-r3rn9s6kelqhan63q42ejk4guoemcf6q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.389034926389-r3rn9s6kelqhan63q42ejk4guoemcf6q</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB07rWkkZHHd92i0XWNjuV5SbacVlo-vfk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>389034926389</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.htd.FriendsCircle</string>
+	<key>PROJECT_ID</key>
+	<string>friendcircle-e3157</string>
+	<key>STORAGE_BUCKET</key>
+	<string>friendcircle-e3157.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:389034926389:ios:9d49902b6edd2718</string>
+	<key>DATABASE_URL</key>
+	<string>https://friendcircle-e3157.firebaseio.com</string>
+</dict>
+</plist>

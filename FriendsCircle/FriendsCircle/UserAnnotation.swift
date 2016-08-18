@@ -17,11 +17,11 @@ class UserAnnotation: NSObject, MKAnnotation {
     
     
     var title: String? {
-        return user?.firstName
+        return user?.name as! String
     }
     
     var key: String {
-        return user.phoneNum
+        return user.phoneNumber as! String
     }
     
     func updateLocation(location: CLLocationCoordinate2D) {
@@ -47,6 +47,6 @@ class UserAnnotation: NSObject, MKAnnotation {
     
     init(user: User) {
         self.user = user
-        self.coordinate = user.currentLocation!
+        self.coordinate = (user.coordinate?.coordinate)!
     }
 }
