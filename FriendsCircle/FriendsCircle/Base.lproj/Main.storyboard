@@ -55,11 +55,12 @@
                         <outlet property="phoneNumTxtField" destination="4sN-xl-BR4" id="xke-xu-9IJ"/>
                         <segue destination="ikn-un-NjS" kind="presentation" identifier="Login2Home" id="sMZ-PM-yXP"/>
                         <segue destination="AAn-Bg-jAm" kind="presentation" identifier="Login2ContactsList" id="oUK-AH-gvx"/>
-                        <segue destination="Dua-Cz-gj4" kind="show" identifier="Login2Verify" id="4OO-MK-tcP"/>
+                        <segue destination="Dua-Cz-gj4" kind="show" identifier="verifySegue" id="4OO-MK-tcP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="107" y="304"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KP0-n4-PjO">
@@ -218,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoT-tw-6E2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378" y="-33"/>
+            <point key="canvasLocation" x="1412" y="-149"/>
         </scene>
         <!--Contacts List View Controller-->
         <scene sceneID="nTt-mq-rpf">
@@ -287,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Zx-ve-ZOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="621"/>
+            <point key="canvasLocation" x="938" y="727"/>
         </scene>
         <!--Verify View Controller-->
         <scene sceneID="h5E-X2-6gY">
@@ -319,11 +320,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="verifyTextField" destination="Rcj-Jh-k5v" id="wvE-KP-jox"/>
+                        <segue destination="Wlr-h7-VbS" kind="show" identifier="homeSegue" id="IsO-dG-wTT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5r-cI-Zry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="-392"/>
+            <point key="canvasLocation" x="634" y="-436"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q5v-BP-xUu">
@@ -341,7 +343,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzg-oY-8JT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982" y="-33"/>
+            <point key="canvasLocation" x="938" y="65"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ls6-kF-7kD"/>
+    </inferredMetricsTieBreakers>
 </document>

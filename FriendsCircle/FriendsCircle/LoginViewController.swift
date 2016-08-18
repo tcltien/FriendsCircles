@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
             getVerifyPhoneNumber(phone)
         }
         
-        performSegueWithIdentifier("Login2Verify", sender: self)
+        performSegueWithIdentifier("verifySegue", sender: self)
     }
     
     @IBAction func onFetchButton(sender: UIButton) {

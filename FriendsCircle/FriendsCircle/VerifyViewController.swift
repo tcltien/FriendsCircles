@@ -32,7 +32,7 @@ class VerifyViewController: UIViewController {
                 let active = ["active": true]
                 userRef.updateChildValues(active)
                 print("Login Success -> performsegue with home screen")
-                //self.performSegueWithIdentifier("homeSegue", sender: nil)
+                self.performSegueWithIdentifier("homeSegue", sender: nil)
                 }, failure: { (error: String) in
                     print(error)
                 }, phone: phoneNum, verifyNumber: verifyText)
